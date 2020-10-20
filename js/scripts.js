@@ -1,29 +1,29 @@
 $(document).ready(function() {
   $("button#hello").click(function() {
-    $("ul#user").prepend("<li>Hello!</li>");
-    $("ul#webpage").prepend("<li>Why hello there!</li>");
-     $("ul#user").children("li").first().click(function() {
-  alert('hi');
+    $("ul#user").before("<ul>Hello!</ul>");
+    $("ul#webpage").before("<ul>Why hello there!</ul>");
+    $("li").click(function() {
+			$("li").addClass("green")})
+    $("ul#user").children("li").first().click(function() {
+    	$("button").remove();
         });
 });
 
-$("h2").click(function() {
-	$("button#hello").addClass("green");
-});
+
 
   $("button#goodbye").click(function() {
-    $("ul#user").prepend("<li>Goodbye!</li>");
-    $("ul#webpage").prepend("<li>Goodbye, dear user!</li>");
+    $("ul#user").after("<ul>Goodbye!</ul>");
+    $("ul#webpage").after("<ul>Goodbye, dear user!</ul>");
      $("ul#user").children("li").first().click(function() {
-  			alert('hi');
+  		$("button").remove();
    });
 });
 
   $("button#stop").click(function() {
-    $("ul#user").prepend("<li>Stop copying me!</li>");
-    $("ul#webpage").prepend("<li>Pardon me. I meant no offense.</li>");
+    $("ul#user").after("<ul>Stop copying me!</ul>");
+    $("ul#webpage").after("<ul>Pardon me. I meant no offense.</ul>");
      $("ul#user").children("li").first().click(function() {
-  			alert('hi');
+  	 $("button").remove();
   });
  });
  });
