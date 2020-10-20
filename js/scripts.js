@@ -6,7 +6,10 @@ $(document).ready(function() {
   alert('hi');
         });
 });
-  
+
+$("h2").click(function() {
+	$("button#hello").addClass("green");
+});
 
   $("button#goodbye").click(function() {
     $("ul#user").prepend("<li>Goodbye!</li>");
